@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="electric_yellow">#F9D535</color>
+    <color name="electric_yellow_dark">#C8A800</color>
+    <color name="red_label">#E3350D</color>
+    <color name="text_dark">#212121</color>
+    <color name="text_medium">#616161</color>
+    <color name="white">#FFFFFF</color>
+    <color name="type_badge_border">#C8A800</color>
+    <color name="type_badge_text">#7A6100</color>
+    <color name="nav_bar_background">#2B2B2B</color>
+    <color name="nav_button_background">#424242</color>
+    <color name="nav_text">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="colorPrimary">#F9D535</color>
+    <color name="colorPrimaryDark">#C8A800</color>
+    <color name="colorAccent">#E3350D</color>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Pokemon" parent="TextAppearance.AppCompat" />
+    <style name="Widget.Pokemon" parent="Widget.AppCompat.Button" />
+
+    <style name="TextAppearance.Pokemon.Name">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokemon.Number">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearance.Pokemon.StatLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/red_label</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokemon.StatValue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextAppearance.Pokemon.AbilityLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/red_label</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Pokemon.AbilityValue">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextAppearance.Pokemon.Description">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_medium</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextAppearance.Pokemon.NavName">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/nav_text</item>
+    </style>
+
+    <style name="Widget.Pokemon.TypeBadge">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/type_badge_text</item>
+        <item name="android:background">@drawable/bg_type_badge</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Pokemon.NavButton">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/nav_text</item>
+        <item name="android:background">@drawable/bg_nav_button</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+</resources>

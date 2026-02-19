@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/electric_yellow"
+    android:id="@+id/main"
+
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <ImageView
+        android:id="@+id/ivFavorite"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/cd_favorite"
+        android:src="@android:drawable/btn_star_big_off"
+        app:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPokemonName"
+        style="@style/TextAppearance.Pokemon.Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/pokemon_name"
+        app:layout_constraintEnd_toStartOf="@id/ivFavorite"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPokemonNumber"
+        style="@style/TextAppearance.Pokemon.Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/pokemon_number"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvPokemonName" />
+
+    <ImageView
+        android:id="@+id/ivPokeball"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:alpha="0.25"
+        android:contentDescription="@string/cd_pokeball"
+        android:src="@drawable/ic_pokeball"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivPokemon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:contentDescription="@string/cd_pikachu"
+        android:src="@drawable/pikachu"
+        app:layout_constraintBottom_toTopOf="@id/cardContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_card"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/navBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineHeader">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/cardGuideLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/cardGuideRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/cardGuideMid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <TextView
+            android:id="@+id/tvType"
+            style="@style/Widget.Pokemon.TypeBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/pokemon_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#E0E0E0"
+            app:layout_constraintEnd_toEndOf="@id/cardGuideRight"
+            app:layout_constraintStart_toStartOf="@id/cardGuideLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvType" />
+
+        <TextView
+            android:id="@+id/tvAlturaLabel"
+            style="@style/TextAppearance.Pokemon.StatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_altura"
+            app:layout_constraintEnd_toStartOf="@id/tvAlturaValue"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/cardGuideLeft"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <TextView
+            android:id="@+id/tvAlturaValue"
+            style="@style/TextAppearance.Pokemon.StatValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/value_altura"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvAlturaLabel"
+            app:layout_constraintEnd_toStartOf="@id/tvVerticalDivider"
+            app:layout_constraintStart_toEndOf="@id/tvAlturaLabel" />
+
+        <View
+            android:id="@+id/tvVerticalDivider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#E0E0E0"
+            app:layout_constraintBottom_toBottomOf="@id/tvPesoLabel"
+            app:layout_constraintEnd_toStartOf="@id/tvHabilidadLabel"
+            app:layout_constraintStart_toEndOf="@id/tvAlturaValue"
+            app:layout_constraintTop_toTopOf="@id/tvAlturaLabel" />
+
+        <TextView
+            android:id="@+id/tvHabilidadLabel"
+            style="@style/TextAppearance.Pokemon.AbilityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_habilidad"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvAlturaLabel"
+            app:layout_constraintEnd_toEndOf="@id/cardGuideRight"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tvVerticalDivider" />
+
+        <TextView
+            android:id="@+id/tvHabilidadValue"
+            style="@style/TextAppearance.Pokemon.AbilityValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/value_habilidad"
+            app:layout_constraintEnd_toEndOf="@id/cardGuideRight"
+            app:layout_constraintStart_toStartOf="@id/tvHabilidadLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvHabilidadLabel" />
+
+        <TextView
+            android:id="@+id/tvPesoLabel"
+            style="@style/TextAppearance.Pokemon.StatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/label_peso"
+            app:layout_constraintEnd_toStartOf="@id/tvPesoValue"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/cardGuideLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvAlturaLabel" />
+
+        <TextView
+            android:id="@+id/tvPesoValue"
+            style="@style/TextAppearance.Pokemon.StatValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/value_peso"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvPesoLabel"
+            app:layout_constraintEnd_toStartOf="@id/tvVerticalDivider"
+            app:layout_constraintStart_toEndOf="@id/tvPesoLabel" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#E0E0E0"
+            app:layout_constraintEnd_toEndOf="@id/cardGuideRight"
+            app:layout_constraintStart_toStartOf="@id/cardGuideLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvPesoLabel" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/TextAppearance.Pokemon.Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pokemon_description"
+            app:layout_constraintEnd_toEndOf="@id/cardGuideRight"
+            app:layout_constraintStart_toStartOf="@id/cardGuideLeft"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <ImageView
+            android:id="@+id/ivPrevPokemon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/cd_prev_pokemon"
+            android:src="@drawable/arbok"
+            app:layout_constraintBottom_toTopOf="@id/tvPrevName"
+            app:layout_constraintEnd_toStartOf="@id/ivNextPokemon"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@id/cardGuideLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/ivNextPokemon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/cd_next_pokemon"
+            android:src="@drawable/raichu"
+            app:layout_constraintBottom_toTopOf="@id/tvNextName"
+            app:layout_constraintEnd_toEndOf="@id/cardGuideRight"
+            app:layout_constraintStart_toEndOf="@id/ivPrevPokemon"
+            app:layout_constraintTop_toTopOf="@id/ivPrevPokemon" />
+
+        <TextView
+            android:id="@+id/tvPrevName"
+            style="@style/TextAppearance.Pokemon.NavName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prev_pokemon"
+            android:textColor="@color/text_medium"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ivPrevPokemon"
+            app:layout_constraintStart_toStartOf="@id/ivPrevPokemon"
+            app:layout_constraintTop_toBottomOf="@id/ivPrevPokemon" />
+
+        <TextView
+            android:id="@+id/tvNextName"
+            style="@style/TextAppearance.Pokemon.NavName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_pokemon"
+            android:textColor="@color/text_medium"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ivNextPokemon"
+            app:layout_constraintStart_toStartOf="@id/ivNextPokemon"
+            app:layout_constraintTop_toBottomOf="@id/ivNextPokemon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/nav_bar_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnPrev"
+            style="@style/Widget.Pokemon.NavButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="@string/nav_prev_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvNavPrevName"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNavPrevName"
+            style="@style/TextAppearance.Pokemon.NavName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prev_pokemon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvNavNextName"
+            app:layout_constraintStart_toEndOf="@id/btnPrev"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNavNextName"
+            style="@style/TextAppearance.Pokemon.NavName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_pokemon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnNext"
+            app:layout_constraintStart_toEndOf="@id/tvNavPrevName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/Widget.Pokemon.NavButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="@string/nav_next_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvNavNextName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
