@@ -51,13 +51,13 @@ fun MenuScreen(
                     text = "POKÉDEX",
                     fontSize = 28.sp,
                     fontWeight = FontWeight.ExtraBold,
-                    color = Color.White
+                    color = Color.Black // Letras negras para mejor contraste
                 )
                 if (username.isNotEmpty()) {
                     Text(
                         text = "Entrenador: $username",
                         fontSize = 12.sp,
-                        color = Color.White.copy(alpha = 0.8f),
+                        color = Color.Black.copy(alpha = 0.7f), // Negro con transparencia
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -84,7 +84,7 @@ fun MenuScreen(
         Text(
             text = "Selecciona un Pokémon",
             fontSize = 14.sp,
-            color = Color.White.copy(alpha = 0.8f),
+            color = Color.Black.copy(alpha = 0.6f), // Negro con transparencia
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .padding(bottom = 12.dp)
